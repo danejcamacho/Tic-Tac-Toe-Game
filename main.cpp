@@ -20,8 +20,9 @@ int main(){
         {7, '7'},
         {8, '8'}
     };
-
+    
     std::cout << "TIC TAC TOE -- Player 1(X) & Player 2 (O) \n";
+
 
     bool finishedGame = false;
     int player = 1;
@@ -76,6 +77,19 @@ int main(){
                 std::cout << "Player 2 Wins!";
                 break;
             }
+        if(gameMap[0] != '0'
+                && gameMap[1] != '1'
+                && gameMap[2] != '2'
+                && gameMap[3] != '3'
+                && gameMap[4] != '4'
+                && gameMap[5] != '5'
+                && gameMap[6] != '6'
+                && gameMap[7] != '7'
+                && gameMap[8] != '8'){
+                    finishedGame = true;
+                    std::cout <<"Draw!";
+                    break;
+                }
         //input a number
         int choice;
         do{
